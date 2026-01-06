@@ -1,0 +1,17 @@
+$primary-blue: #2563eb;
+$primary-magenta: #d946ef;
+$dark-blue: #1e3a8a;
+$light-blue: #dbeafe;
+$dark-magenta: #a21caf;
+$light-magenta: #fae8ff;
+$gradient-primary: linear-gradient(135deg, $primary-blue, $primary-magenta);
+$gradient-light: linear-gradient(135deg, $light-blue, $light-magenta);
+$white: #ffffff;
+$gray-dark: #1f2937;
+$gray-light: #f3f4f6;
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+$transition-base: all 0.3s ease;
+$transition-slow: all 0.5s ease;

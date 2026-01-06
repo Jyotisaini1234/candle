@@ -1,0 +1,156 @@
+.about {
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #fdf4ff, #eef2ff);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* -------- TEXT -------- */
+  &__text {
+    animation: fadeInUp 0.6s ease;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+
+    &-highlight {
+      color: #d946ef;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+
+  /* -------- FEATURES -------- */
+  &__features {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: #ffffff;
+    padding: 1.2rem 1.4rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__feature-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fdf4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__feature-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+  }
+
+  &__feature-text {
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  /* -------- IMAGE -------- */
+  &__image {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 900px) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d946ef, #2563eb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 25px 60px rgba(217, 70, 239, 0.35);
+    animation: float 4s ease-in-out infinite;
+  }
+
+  &__flame-icon {
+    width: 120px;
+    height: 120px;
+    color: #ffffff;
+    z-index: 2;
+  }
+
+  &__image-gradient {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.35),
+      transparent 70%
+    );
+    z-index: 1;
+  }
+}
+
+/* -------- ANIMATIONS -------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,50 @@
+[
+{
+    "id": 1,
+    "name": "Lavender Dreams",
+    "price": 24.99,
+    "image": "https://i.pinimg.com/736x/23/a6/47/23a64748b51b92c4d6cd43e48c3b878b.jpg",
+    "description": "Calming lavender scent for relaxation",
+    "rating": 5
+},
+{
+    "id": 2,
+    "name": "Vanilla Bliss",
+    "price": 22.99,
+    "image": "https://i.pinimg.com/736x/31/e8/d2/31e8d2da4558ce0363704a5a1258f8a4.jpg",
+    "description": "Sweet vanilla aroma for cozy evenings",
+    "rating": 5
+},
+{
+    "id": 3,
+    "name": "Ocean Breeze",
+    "price": 26.99,
+    "image": "https://i.pinimg.com/1200x/52/be/78/52be786aca8e1937895009611cf4db06.jpg",
+    "description": "Fresh coastal scent for your space",
+    "rating": 4
+},
+{
+    "id": 4,
+    "name": "Cinnamon Spice",
+    "price": 23.99,
+    "image": "https://i.pinimg.com/1200x/01/bb/6a/01bb6a7fa8760b0e64e6204847709f95.jpg",
+    "description": "Warm spicy fragrance for winter nights",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "name": "Rose Garden",
+    "price": 28.99,
+    "image": "https://i.pinimg.com/1200x/e1/2c/ca/e12ccaa89e9136af74b7194b25735652.jpg",
+    "description": "Elegant floral notes for sophistication",
+    "rating": 4
+  },
+  {
+    "id": 6,
+    "name": "Citrus Burst",
+    "price": 21.99,
+    "image": "https://i.pinimg.com/1200x/35/12/dd/3512dda4b270b82c39bfd8a3bccba445.jpg",
+    "description": "Energizing citrus blend for freshness",
+    "rating": 5
+  }
+]

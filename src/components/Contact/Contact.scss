@@ -1,0 +1,81 @@
+.contact {
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #eef2ff, #fdf4ff);
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+
+    span {
+      color: #d946ef;
+    }
+  }
+
+  &__subtitle {
+    color: #6b7280;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    h3 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    p {
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+      color: #6b7280;
+      word-break: break-word;
+    }
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d946ef, #2563eb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}

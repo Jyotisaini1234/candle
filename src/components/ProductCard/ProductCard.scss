@@ -1,0 +1,111 @@
+@import '../../styles/variables.scss';
+
+.product-card {
+  background: $white;
+  border-radius: 1.5rem;
+  box-shadow: $shadow-lg;
+  overflow: hidden;
+  transition: $transition-slow;
+  
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: $shadow-xl;
+    
+    .product-card__image-container {
+      .product-card__icon {
+        transform: scale(1.1) rotate(10deg);
+      }
+    }
+    
+    .product-card__badge {
+      opacity: 1;
+    }
+  }
+  
+  &__image-container {
+    position: relative;
+    height: 16rem;
+    background: $gradient-light;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  &__icon {
+    width: 8rem;
+    height: 8rem;
+    transition: $transition-slow;
+    animation: flicker 3s ease-in-out infinite;
+  }
+  
+  &__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: 0;
+    transition: $transition-base;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  &__content {
+    padding: 1.5rem;
+  }
+  
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $gray-dark;
+    margin-bottom: 0.5rem;
+  }
+  
+  &__description {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    
+    span {
+      margin-left: 0.5rem;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+  }
+  
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  &__cart-btn {
+    background: $gradient-primary;
+    color: $white;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: $transition-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      transform: scale(1.1) rotate(12deg);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.features {
+  padding: 5rem 1.5rem;
+  
+  &__container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  &__grid {
+    display: grid;
+    gap: 2rem;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.feature-card {
+  background: $white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: $shadow-lg;
+  text-align: center;
+  transition: $transition-slow;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $shadow-xl;
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  &__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $gray-dark;
+    margin-bottom: 0.5rem;
+  }
+  
+  &__description {
+    color: #6b7280;
+  }
+}

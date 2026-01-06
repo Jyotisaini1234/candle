@@ -1,0 +1,136 @@
+@import '../../styles/variables.scss';
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  transition: $transition-slow;
+  
+  &--scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: $shadow-lg;
+  }
+  
+  &__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    
+    &-icon {
+      width: 2rem;
+      height: 2rem;
+      transition: $transition-base;
+    }
+    
+    &-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    &:hover .header__logo-icon {
+      transform: rotate(12deg) scale(1.1);
+    }
+  }
+  
+  &__nav {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+    
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+  
+  &__link {
+    color: $gray-dark;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: $transition-base;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $gradient-primary;
+      transition: $transition-base;
+    }
+    
+    &:hover {
+      color: $primary-blue;
+      
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  &__cart {
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    transition: $transition-base;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    
+    &:hover {
+      background: $light-blue;
+    }
+  }
+  
+  &__cart-badge {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+    background: $gradient-primary;
+    color: $white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  &__menu-toggle {
+    display: block;
+    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
